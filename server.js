@@ -1,10 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-
 const app = express();
 const PORT = process.env.PORT || 5001;
-const cors = require("cors");
 
 app.use(cors({
     origin: "https://xbox-frontend.vercel.app",
