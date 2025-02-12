@@ -26,15 +26,15 @@ const sendEmail = (alert) => {
         subject: "🚨 Xbox Usage Alert!",
         text: `${alert.roommate} saw ${alert.friendPlaying} playing Xbox at ${new Date(alert.timestamp).toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' })}.`
     };
-};
 
-transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-        console.log("Error sending email:", error);
-    } else {
-        console.log("Email sent:", info.response);
-    }
-});
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log("Error sending email:", error);
+        } else {
+            console.log("Email sent:", info.response);
+        }
+    });
+};
 
 app.post("/notify", (req, res) => {
     const { roommate, friendPlaying } = req.body;
