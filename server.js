@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
 const sendEmail = (alert) => {
     const mailOptions = {
         from: "kalangeatharv@gmail.com",
-        to: "suyash1jadhav@gmail.com",
+        to: "rishiwidcrown89@hotmail.com",
         subject: "🚨 Xbox Usage Alert!",
         text: `${alert.roommate} saw ${alert.friendPlaying} playing Xbox at ${new Date(alert.timestamp).toLocaleTimeString()}.`
     };
