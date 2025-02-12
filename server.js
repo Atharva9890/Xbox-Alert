@@ -4,8 +4,14 @@ const nodemailer = require("nodemailer");
 
 const app = express();
 const PORT = process.env.PORT || 5001;
+const cors = require("cors");
 
-app.use(cors());
+app.use(cors({
+    origin: "https://xbox-frontend.vercel.app",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"]
+}));
+
 app.use(express.json());
 
 let alerts = [];
