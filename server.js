@@ -35,7 +35,6 @@ transporter.sendMail(mailOptions, (error, info) => {
         console.log("Email sent:", info.response);
     }
 });
-};
 
 app.post("/notify", (req, res) => {
     const { roommate, friendPlaying } = req.body;
